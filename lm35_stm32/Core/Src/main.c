@@ -55,7 +55,7 @@ static void MX_ADC1_Init(void);
 static void MX_USART2_UART_Init(void);
 /* USER CODE BEGIN PFP */
 void temp_conv(uint16_t temp_var);
-void print_char(unit32_t num_var);
+void print_char(uint32_t num_var);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
@@ -95,7 +95,7 @@ uint16_t ADC_VAL;
   MX_ADC1_Init();
   MX_USART2_UART_Init();
   /* USER CODE BEGIN 2 */
-HAL_UART_Transmit(&huart1, Welcome_msg, strlen(Welcome_msg), 40);
+HAL_UART_Transmit(&huart2, Welcome_msg, strlen(Welcome_msg), 40);
   /* USER CODE END 2 */
 
   /* Infinite loop */

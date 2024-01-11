@@ -60,8 +60,8 @@ all: main-build
 main-build: lm35_stm32.elf secondary-outputs
 
 # Tool invocations
-lm35_stm32.elf lm35_stm32.map: $(OBJS) $(USER_OBJS) /home/sunbeam/Desktop/project\ work/stm32/lm35_stm32/STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "lm35_stm32.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/sunbeam/Desktop/project work/stm32/lm35_stm32/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lm35_stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+lm35_stm32.elf lm35_stm32.map: $(OBJS) $(USER_OBJS) /home/surya/CDAC-PROJECT/lm35_stm32/STM32F407VGTX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "lm35_stm32.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m4 -T"/home/surya/CDAC-PROJECT/lm35_stm32/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="lm35_stm32.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
