@@ -1,0 +1,11 @@
+11:36:24 **** Incremental Build of configuration Debug for project ecg_hal ****
+make -j8 all 
+arm-none-eabi-gcc -o "ecg_hal.elf" @"objects.list"   -mcpu=cortex-m4 -T"/home/surya/test_health/ecg_hal/STM32F407VGTX_FLASH.ld" --specs=nosys.specs -Wl,-Map="ecg_hal.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -u _printf_float -Wl,--start-group -lc -lm -Wl,--end-group
+/opt/st/stm32cubeide_1.13.2/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.linux64_1.1.1.202309131626/tools/bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/bin/ld: ./Core/Src/stm32f4xx_it.o: in function `SysTick_Handler':
+/home/surya/test_health/ecg_hal/Debug/../Core/Src/stm32f4xx_it.c:184: multiple definition of `SysTick_Handler'; ./Core/Src/STM32F407_I2C_LCD16x02_Driver.o:/home/surya/test_health/ecg_hal/Debug/../Core/Src/STM32F407_I2C_LCD16x02_Driver.c:284: first defined here
+collect2: error: ld returned 1 exit status
+make: *** [makefile:64: ecg_hal.elf] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+11:36:25 Build Failed. 3 errors, 0 warnings. (took 991ms)
+
