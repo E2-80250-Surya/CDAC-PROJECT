@@ -1,0 +1,12 @@
+16:24:24 **** Incremental Build of configuration Debug for project h ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/esp8266_communication.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F407xx -c -I../Core/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc -I../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32F4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/esp8266_communication.d" -MT"Core/Src/esp8266_communication.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/esp8266_communication.o"
+../Core/Src/esp8266_communication.c:9:10: fatal error: ESP8266WiFi.h: No such file or directory
+    9 | #include <ESP8266WiFi.h>
+      |          ^~~~~~~~~~~~~~~
+compilation terminated.
+make: *** [Core/Src/subdir.mk:43: Core/Src/esp8266_communication.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+16:24:27 Build Failed. 2 errors, 0 warnings. (took 2s.715ms)
+
